@@ -272,7 +272,7 @@ const fileManifest = [
   },
   {
     "url": "src/pwa-gulp-app.html",
-    "revision": "e184168856c55c6e64dd11c612d9e9fe"
+    "revision": "7cc763ded592b60f79950b66675c6601"
   },
   {
     "url": "src/script.js",
