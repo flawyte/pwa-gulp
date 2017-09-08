@@ -15,7 +15,8 @@
     "gulp-uglify": "^3.0.0",
     "html-minifier": "^3.5.3",
     "merge-stream": "^1.0.1",
-    "polymer-build": "^2.0.0"
+    "polymer-build": "^2.0.0",
+    "workbox-build": "^2.0.1"
   },
   "directories": {
     "test": "test"
