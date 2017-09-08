@@ -275,6 +275,14 @@ const fileManifest = [
     "revision": "e184168856c55c6e64dd11c612d9e9fe"
   },
   {
+    "url": "src/script.js",
+    "revision": "31257b41a0dc5b386664c4a35c229ac9"
+  },
+  {
+    "url": "src/style.css",
+    "revision": "bb943da0dceccb8ba08215b97254109a"
+  },
+  {
     "url": "workbox-sw.prod.v1.3.0.js.map",
     "revision": "f7ef2d1eb0b250ec46d79e81e9a3d0df"
   }
