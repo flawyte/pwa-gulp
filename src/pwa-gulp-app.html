@@ -20,6 +20,11 @@
       static get is() {
         return 'pwa-gulp-app';
       }
+
+      ready() {
+        super.ready();
+        navigator.serviceWorker.register('sw.js');
+      }
     }
 
     window.customElements.define(PwaGulpApp.is, PwaGulpApp);
