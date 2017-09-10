@@ -1,13 +1,1 @@
-class Element {
-  static get version() {
-    return '0.0.0';
-  }
-
-  get relevant() {
-    return false;
-  }
-
-  foo() {
-    return 'bar';
-  }
-}
+"use strict";function _classCallCheck(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}var _createClass=function(){function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(n,t,r){return t&&e(n.prototype,t),r&&e(n,r),n}}(),Element=function(){function e(){_classCallCheck(this,e)}return _createClass(e,[{key:"foo",value:function(){return"bar"}},{key:"relevant",get:function(){return!1}}],[{key:"version",get:function(){return"0.0.0"}}]),e}();
