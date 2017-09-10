@@ -16,9 +16,21 @@
   </template>
 
   <script>
+    // import { Component } from './script';
+
+    console.log('pwa-gulp-app');
+
     class PwaGulpApp extends Polymer.Element {
       static get is() {
         return 'pwa-gulp-app';
+      }
+
+      constructor() {
+        super();
+
+        console.log(typeof Component);
+        if (typeof Component !== 'undefined')
+          new Component();
       }
 
       ready() {

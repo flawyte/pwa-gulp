@@ -55,10 +55,6 @@ workboxSW.precache([
     "revision": "dd81571263e598368cc56f9919e6b515"
   },
   {
-    "url": "bower_components/polymer/lib/legacy/class.html",
-    "revision": "592c2785d627a2a17e06fe2b72a8dd3f"
-  },
-  {
     "url": "bower_components/polymer/lib/legacy/legacy-element-mixin.html",
     "revision": "c3665a8888ebb8553e832b399974b253"
   },
@@ -69,10 +65,6 @@ workboxSW.precache([
   {
     "url": "bower_components/polymer/lib/legacy/polymer-fn.html",
     "revision": "ee6eba8dfb2bf2893a3c28de909aacd3"
-  },
-  {
-    "url": "bower_components/polymer/lib/legacy/polymer.dom.html",
-    "revision": "bddca177722730b16be0bdf38188b85c"
   },
   {
     "url": "bower_components/polymer/lib/legacy/templatizer-behavior.html",
@@ -123,10 +115,6 @@ workboxSW.precache([
     "revision": "faa56a84ce3b6a03c49b21bfe0849312"
   },
   {
-    "url": "bower_components/polymer/lib/utils/unresolved.html",
-    "revision": "25e2623f36d889e1655d3bfb66fd5458"
-  },
-  {
     "url": "bower_components/polymer/polymer-element.html",
     "revision": "f30318bf31e50e2073d10d4c8634da44"
   },
@@ -160,7 +148,7 @@ workboxSW.precache([
   },
   {
     "url": "bower_components/webcomponentsjs/webcomponents-loader.js",
-    "revision": "f13bbbbf647b7922575a7894367ddaaf"
+    "revision": "d8b254a2aa07914e315bb494c5d9be4f"
   },
   {
     "url": "bower_components/webcomponentsjs/webcomponents-sd-ce.js",
@@ -180,11 +168,15 @@ workboxSW.precache([
   },
   {
     "url": "src/pwa-gulp-app.html",
-    "revision": "a65fafb21ea1beb6c87b468ef31de8ac"
+    "revision": "9a5dc96bead0c3bc07b9ea3f66034492"
   },
   {
     "url": "src/script.js",
-    "revision": "3bcb9f18d56739d266e81c49f48c8488"
+    "revision": "6142459a22570e0c1816f7770b051a42"
+  },
+  {
+    "url": "src/script2.js",
+    "revision": "7b2b429a942b10d939181e582244e1c6"
   },
   {
     "url": "src/style.css",
