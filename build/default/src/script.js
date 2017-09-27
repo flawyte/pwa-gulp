@@ -1,1 +1,71 @@
-"use strict";function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(exports,"__esModule",{value:!0}),exports.Component=void 0;var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_script=require("./script2"),_script2=_interopRequireDefault(_script);console.log("script.js");var Component=exports.Component=function(){function e(){_classCallCheck(this,e),console.log((0,_script2.default)())}return _createClass(e,null,[{key:"version",get:function(){return"0.0.0"}}]),_createClass(e,[{key:"foobar",value:function(){return(0,_script2.default)()}},{key:"relevant",get:function(){return!1}}]),e}();
+'use strict';
+
+System.register(['./script2.js'], function (_export, _context) {
+  "use strict";
+
+  var fn, _createClass, Component;
+
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  return {
+    setters: [function (_script2Js) {
+      fn = _script2Js.default;
+    }],
+    execute: function () {
+      _createClass = function () {
+        function defineProperties(target, props) {
+          for (var i = 0; i < props.length; i++) {
+            var descriptor = props[i];
+            descriptor.enumerable = descriptor.enumerable || false;
+            descriptor.configurable = true;
+            if ("value" in descriptor) descriptor.writable = true;
+            Object.defineProperty(target, descriptor.key, descriptor);
+          }
+        }
+
+        return function (Constructor, protoProps, staticProps) {
+          if (protoProps) defineProperties(Constructor.prototype, protoProps);
+          if (staticProps) defineProperties(Constructor, staticProps);
+          return Constructor;
+        };
+      }();
+
+      console.log('script.js');
+
+      _export('Component', Component = function () {
+        _createClass(Component, null, [{
+          key: 'version',
+          get: function get() {
+            return '0.0.0';
+          }
+        }]);
+
+        function Component() {
+          _classCallCheck(this, Component);
+
+          console.log(fn());
+        }
+
+        _createClass(Component, [{
+          key: 'foobar',
+          value: function foobar() {
+            return fn();
+          }
+        }, {
+          key: 'relevant',
+          get: function get() {
+            return false;
+          }
+        }]);
+
+        return Component;
+      }());
+
+      _export('Component', Component);
+    }
+  };
+});

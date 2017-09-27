@@ -33,11 +33,8 @@ gulp.task('build', ['clean'], () => {
   const project = new PolymerProject(require('./polymer.json'));
   const sourcesHtmlSplitter = new HtmlSplitter();
 
-  // Combine sources and dependencies
-  const stream = mergeStreams(project.sources(), project.dependencies());
-
   // Transform code
-  stream
+  const dependencies = project.dependencies()
     .pipe(sourcesHtmlSplitter.split())
     .pipe(gulpif(/\.css$/, cssSlam({
       stripWhitespace: true
@@ -52,7 +49,27 @@ gulp.task('build', ['clean'], () => {
     .pipe(gulpif(/\.js$/, babel({ presets: ['es2015'] })))
     .pipe(gulpif(/\.js$/, uglify()))
     .pipe(sourcesHtmlSplitter.rejoin())
+    ;
+  const sources = project.sources()
+    .pipe(sourcesHtmlSplitter.split())
+    // .pipe(gulpif(/\.css$/, cssSlam({
+    //   stripWhitespace: true
+    // })))
+    // .pipe(gulpif(/\.html$/, cssSlam({
+    //   stripWhitespace: true
+    // })))
+    // .pipe(gulpif(/\.html$/, htmlMinifier({
+    //   collapseWhitespace: true,
+    //   removeComments: true
+    // })))
+    .pipe(gulpif(/\.js$/, babel({ plugins: ['transform-es2015-modules-systemjs'], presets: ['es2015'] })))
+    // .pipe(gulpif(/\.js$/, uglify()))
+    // .pipe(sourcesHtmlSplitter.rejoin())
     .pipe(project.addCustomElementsEs5Adapter())
+    ;
+
+  // Combine sources and dependencies
+  const stream = mergeStreams(sources, dependencies)
     .pipe(gulp.dest('build/default/'))
     ;
 

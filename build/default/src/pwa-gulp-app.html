@@ -1,1 +1,23 @@
-<html><head><link rel="import" href="../bower_components/paper-button/paper-button.html"><link rel="import" href="../bower_components/polymer/polymer-element.html"></head><body><dom-module id="pwa-gulp-app"><template><style>:host{align-items:center;display:flex;height:100%;justify-content:center;}</style><paper-button id="button" raised="">Click me!</paper-button></template><script>"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}var _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},_get=function e(t,o,n){null===t&&(t=Function.prototype);var r=Object.getOwnPropertyDescriptor(t,o);if(void 0===r){var i=Object.getPrototypeOf(t);return null===i?void 0:e(i,o,n)}if("value"in r)return r.value;var p=r.get;if(void 0!==p)return p.call(n)},_createClass=function(){function e(e,t){for(var o=0;o<t.length;o++){var n=t[o];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,o,n){return o&&e(t.prototype,o),n&&e(t,n),t}}();console.log("pwa-gulp-app");var PwaGulpApp=function(e){function t(){_classCallCheck(this,t);var e=_possibleConstructorReturn(this,(t.__proto__||Object.getPrototypeOf(t)).call(this));return console.log("undefined"==typeof Component?"undefined":_typeof(Component)),"undefined"!=typeof Component&&new Component,e}return _inherits(t,Polymer.Element),_createClass(t,null,[{key:"is",get:function(){return"pwa-gulp-app"}}]),_createClass(t,[{key:"ready",value:function(){_get(t.prototype.__proto__||Object.getPrototypeOf(t.prototype),"ready",this).call(this),navigator.serviceWorker.register("sw.js")}}]),t}();window.customElements.define(PwaGulpApp.is,PwaGulpApp);</script></dom-module></body></html>
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="pwa-gulp-app">
+  <template>
+    <style>
+      :host {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+      }
+
+      paper-button {
+        background: white;
+      }
+    </style>
+
+    <paper-button id="button" raised="">Click me!</paper-button>
+  </template>
+
+  <script src="pwa-gulp-app.html_script_0.js"></script>
+</dom-module>

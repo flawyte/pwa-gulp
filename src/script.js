@@ -1,4 +1,4 @@
-import fn from './script2';
+import fn from './script2.js';
 
 console.log('script.js');
 

@@ -3,8 +3,16 @@ importScripts('workbox-sw.prod.v1.3.0.js');
 const workboxSW = new self.WorkboxSW();
 workboxSW.precache([
   {
+    "url": "bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html",
+    "revision": "ca5dc881ff3603281e488d356e0e1b83"
+  },
+  {
     "url": "bower_components/iron-behaviors/iron-button-state.html",
     "revision": "9b16d4c937d51997492943334dcd12fe"
+  },
+  {
+    "url": "bower_components/iron-behaviors/iron-control-state.html",
+    "revision": "99abcf23eb60ce6d32ee61f129a1e848"
   },
   {
     "url": "bower_components/iron-flex-layout/iron-flex-layout.html",
@@ -21,6 +29,10 @@ workboxSW.precache([
   {
     "url": "bower_components/paper-button/paper-button.html",
     "revision": "373f0f4cd4abbb1d5a48b479c2a5cd21"
+  },
+  {
+    "url": "bower_components/paper-ripple/paper-ripple.html",
+    "revision": "63e70e15f7c20c18c10ca788d60ace23"
   },
   {
     "url": "bower_components/paper-styles/element-styles/paper-material-styles.html",
@@ -55,6 +67,10 @@ workboxSW.precache([
     "revision": "dd81571263e598368cc56f9919e6b515"
   },
   {
+    "url": "bower_components/polymer/lib/legacy/class.html",
+    "revision": "592c2785d627a2a17e06fe2b72a8dd3f"
+  },
+  {
     "url": "bower_components/polymer/lib/legacy/legacy-element-mixin.html",
     "revision": "c3665a8888ebb8553e832b399974b253"
   },
@@ -65,6 +81,10 @@ workboxSW.precache([
   {
     "url": "bower_components/polymer/lib/legacy/polymer-fn.html",
     "revision": "ee6eba8dfb2bf2893a3c28de909aacd3"
+  },
+  {
+    "url": "bower_components/polymer/lib/legacy/polymer.dom.html",
+    "revision": "bddca177722730b16be0bdf38188b85c"
   },
   {
     "url": "bower_components/polymer/lib/legacy/templatizer-behavior.html",
@@ -79,8 +99,28 @@ workboxSW.precache([
     "revision": "ca690f1d959f5be15c16ac9d9d373fc2"
   },
   {
+    "url": "bower_components/polymer/lib/mixins/mutable-data.html",
+    "revision": "86119dfbf449cfa28504504ebe7da594"
+  },
+  {
+    "url": "bower_components/polymer/lib/mixins/property-accessors.html",
+    "revision": "c596ce786811362555de1e5ab098dcd8"
+  },
+  {
     "url": "bower_components/polymer/lib/mixins/property-effects.html",
     "revision": "eb52cf7ef35f6a3a8aa96b83a29bab5d"
+  },
+  {
+    "url": "bower_components/polymer/lib/mixins/template-stamp.html",
+    "revision": "b143fe0790f0b83402a09341a36056d7"
+  },
+  {
+    "url": "bower_components/polymer/lib/utils/array-splice.html",
+    "revision": "53f58df50f3ca2c291c62b8331eb3074"
+  },
+  {
+    "url": "bower_components/polymer/lib/utils/async.html",
+    "revision": "a2321298f28bdb6ae91ebdd39908f7e9"
   },
   {
     "url": "bower_components/polymer/lib/utils/boot.html",
@@ -91,12 +131,32 @@ workboxSW.precache([
     "revision": "b11569ee49cf3c01a6f2ba72b8977cbd"
   },
   {
+    "url": "bower_components/polymer/lib/utils/debounce.html",
+    "revision": "ddea4417440ed422450435a40ac3dc65"
+  },
+  {
+    "url": "bower_components/polymer/lib/utils/flattened-nodes-observer.html",
+    "revision": "2a476646ce7af6a0375b2f8698119d14"
+  },
+  {
+    "url": "bower_components/polymer/lib/utils/flush.html",
+    "revision": "2995549c86260217233778644e37a677"
+  },
+  {
+    "url": "bower_components/polymer/lib/utils/gestures.html",
+    "revision": "a184d3f5b972101c3de2e67fef6fefc6"
+  },
+  {
     "url": "bower_components/polymer/lib/utils/import-href.html",
     "revision": "448b0c8142c73bb0a850a7a017289efd"
   },
   {
     "url": "bower_components/polymer/lib/utils/mixin.html",
     "revision": "8040dad2391809ef79cc36d355650001"
+  },
+  {
+    "url": "bower_components/polymer/lib/utils/path.html",
+    "revision": "2967e9f8b18ee29206a375213678a521"
   },
   {
     "url": "bower_components/polymer/lib/utils/render-status.html",
@@ -115,6 +175,14 @@ workboxSW.precache([
     "revision": "faa56a84ce3b6a03c49b21bfe0849312"
   },
   {
+    "url": "bower_components/polymer/lib/utils/templatize.html",
+    "revision": "666deab2a4591fb49d52278898875f29"
+  },
+  {
+    "url": "bower_components/polymer/lib/utils/unresolved.html",
+    "revision": "25e2623f36d889e1655d3bfb66fd5458"
+  },
+  {
     "url": "bower_components/polymer/polymer-element.html",
     "revision": "f30318bf31e50e2073d10d4c8634da44"
   },
@@ -125,6 +193,18 @@ workboxSW.precache([
   {
     "url": "bower_components/shadycss/apply-shim.html",
     "revision": "5b73ef5bfcac4955f6c24f55ea322eb1"
+  },
+  {
+    "url": "bower_components/shadycss/apply-shim.min.js",
+    "revision": "1616f23f6be4d93fe82071a61804aa45"
+  },
+  {
+    "url": "bower_components/shadycss/custom-style-interface.html",
+    "revision": "7e28230b85cdcc2488e87172c3395d52"
+  },
+  {
+    "url": "bower_components/shadycss/custom-style-interface.min.js",
+    "revision": "b09483e65e5e13b61889cdfa0108b794"
   },
   {
     "url": "bower_components/webcomponentsjs/custom-elements-es5-adapter.js",
@@ -163,24 +243,36 @@ workboxSW.precache([
     "revision": "879fb4d29da54d784ad45a258a2f3e08"
   },
   {
+    "url": "index.html",
+    "revision": "a2c0d18a7e0eab24f27cba801560ad31"
+  },
+  {
+    "url": "index.html_script_0.js",
+    "revision": "7171440aab1902bca0930016002beb89"
+  },
+  {
     "url": "manifest.json",
     "revision": "a592faf973bd12d3a4e4f2fdaa7fced8"
   },
   {
     "url": "src/pwa-gulp-app.html",
-    "revision": "9a5dc96bead0c3bc07b9ea3f66034492"
+    "revision": "007509e0c9a860a4e247b334d775c295"
+  },
+  {
+    "url": "src/pwa-gulp-app.html_script_0.js",
+    "revision": "aed749f9f4b4b8ba622135798eee8746"
   },
   {
     "url": "src/script.js",
-    "revision": "6142459a22570e0c1816f7770b051a42"
+    "revision": "3d3d249e76dbb85722942c6b512c8428"
   },
   {
     "url": "src/script2.js",
-    "revision": "7b2b429a942b10d939181e582244e1c6"
+    "revision": "843ee20181da6ffd2581b7e701bb7dc2"
   },
   {
     "url": "src/style.css",
-    "revision": "bb943da0dceccb8ba08215b97254109a"
+    "revision": "6c5aa2a75e08565554272ac1492756ad"
   },
   {
     "url": "workbox-sw.prod.v1.3.0.js",

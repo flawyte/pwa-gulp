@@ -10,13 +10,17 @@
         height: 100%;
         justify-content: center;
       }
+
+      paper-button {
+        background: white;
+      }
     </style>
 
     <paper-button id="button" raised>Click me!</paper-button>
   </template>
 
   <script>
-    // import { Component } from './script';
+    import { Component } from './script.js';
 
     console.log('pwa-gulp-app');
 
@@ -27,8 +31,6 @@
 
       constructor() {
         super();
-
-        console.log(typeof Component);
         if (typeof Component !== 'undefined')
           new Component();
       }

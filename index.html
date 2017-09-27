@@ -8,6 +8,7 @@
 
     <title>pwa-gulp</title>
 
+    <script src="node_modules/systemjs/dist/system.js"></script>
     <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
 
     <link rel="manifest" href="manifest.json">
@@ -21,8 +22,6 @@
 
     <script>
       window.app = document.querySelector('pwa-gulp-app');
-      window.mainFragment = app.$.mainFragment;
-      window.splashFragment = app.$.splashFragment;
     </script>
 
     <style>

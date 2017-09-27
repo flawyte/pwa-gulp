@@ -1,6 +1,9 @@
 {
   "name": "pwa-gulp",
   "author": "Mickaël Allonneau <mickael.allonneau@gmail.com> (https://flawyte.github.io)",
+  "dependencies": {
+    "systemjs": "^0.20.18"
+  },
   "description": "Discovering Progressive Web App(s) by building one using Polymer 2, ES6, Workbox and more.",
   "devDependencies": {
     "babel-core": "^6.26.0",
