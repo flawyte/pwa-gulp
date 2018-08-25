@@ -1,7 +1,7 @@
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 
-<dom-module id="pwa-gulp-app">
+<dom-module id="main-app">
   <template>
     <style>
       :host {
@@ -12,35 +12,29 @@
       }
 
       paper-button {
-        background: white;
+        background: #eeeeee;
+        color: black;
       }
     </style>
 
     <paper-button id="button" raised>Click me!</paper-button>
+    <p id="p"></p>
   </template>
 
   <script>
-    import { Component } from './script.js';
+    import { date } from './utils.js';
 
-    console.log('pwa-gulp-app');
-
-    class PwaGulpApp extends Polymer.Element {
+    class MainApp extends Polymer.Element {
       static get is() {
-        return 'pwa-gulp-app';
-      }
-
-      constructor() {
-        super();
-        if (typeof Component !== 'undefined')
-          new Component();
+        return 'main-app';
       }
 
       ready() {
         super.ready();
-        navigator.serviceWorker.register('sw.js');
+        this.$.p.textContent = date();
       }
     }
 
-    window.customElements.define(PwaGulpApp.is, PwaGulpApp);
+    window.customElements.define(MainApp.is, MainApp);
   </script>
 </dom-module>

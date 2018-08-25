@@ -2,58 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="description" content="Discovering Progressive Web App(s) by building one using Polymer 2, Service Workers etc.">
-    <meta name="theme-color" content="#0D47A1">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
     <title>pwa-gulp</title>
 
     <script src="node_modules/systemjs/dist/system.js"></script>
     <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
 
-    <link rel="manifest" href="manifest.json">
     <link rel="import" href="src/pwa-gulp-app.html">
   </head>
   <body>
-
-    <!-- JavaScript is enabled -->
 
     <pwa-gulp-app></pwa-gulp-app>
 
     <script>
       window.app = document.querySelector('pwa-gulp-app');
     </script>
-
-    <style>
-      body {
-        background: #eeeeee;
-        height: 100%;
-        margin: 0;
-      }
-      html {
-        height: 100%;
-      }
-    </style>
-
-    <!-- JavaScript is NOT enabled -->
-
-    <noscript>
-      <style>
-        noscript {
-          text-align: center;
-        }
-        noscript > div {
-          align-items: center;
-          display: flex;
-          height: 100%;
-          justify-content: center;
-        }
-      </style>
-
-      <div>
-        <p>You must have JavaScript enabled to use this web app.</p>
-      </div>
-    </noscript>
 
   </body>
 </html>

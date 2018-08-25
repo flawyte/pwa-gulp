@@ -1,16 +1,6 @@
 const gulp = require('gulp');
 
-gulp.task('default', ['build'], () => {
-  // Generate Service Worker (from /sw.js)
-  workbox.injectManifest({
-    globDirectory: 'build/default/',
-    globPatterns: [
-      '**/*'
-    ],
-    swDest: 'build/default/sw.js',
-    swSrc: 'sw.js'
-  });
-});
+gulp.task('default', ['build']);
 
 const babel = require('gulp-babel');
 const cssSlam = require('css-slam').gulp;
@@ -52,34 +42,17 @@ gulp.task('build', ['clean'], () => {
     ;
   const sources = project.sources()
     .pipe(sourcesHtmlSplitter.split())
-    // .pipe(gulpif(/\.css$/, cssSlam({
-    //   stripWhitespace: true
-    // })))
-    // .pipe(gulpif(/\.html$/, cssSlam({
-    //   stripWhitespace: true
-    // })))
-    // .pipe(gulpif(/\.html$/, htmlMinifier({
-    //   collapseWhitespace: true,
-    //   removeComments: true
-    // })))
     .pipe(gulpif(/\.js$/, babel({ plugins: ['transform-es2015-modules-systemjs'], presets: ['es2015'] })))
-    // .pipe(gulpif(/\.js$/, uglify()))
-    // .pipe(sourcesHtmlSplitter.rejoin())
+    .pipe(sourcesHtmlSplitter.rejoin())
     .pipe(project.addCustomElementsEs5Adapter())
     ;
 
   // Combine sources and dependencies
-  const stream = mergeStreams(sources, dependencies)
+  mergeStreams(sources, dependencies)
     .pipe(gulp.dest('build/default/'))
     ;
 
   // Copy Web Components polyfills
   gulp.src('bower_components/webcomponentsjs/*ents*.js')
-  .pipe(gulp.dest('build/default/bower_components/webcomponentsjs/'));
-
-  // Copy Workbox files
-  gulp.src('workbox-sw*')
-  .pipe(gulp.dest('build/default/'));
-
-  return stream;
+    .pipe(gulp.dest('build/default/bower_components/webcomponentsjs/'));
 });
